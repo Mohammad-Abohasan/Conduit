@@ -3,6 +3,7 @@
     "cypress": "^13.3.0"
   },
   "dependencies": {
+    "cypress-plugin-api": "^2.11.1",
     "typescript": "^5.2.2"
   }
 }
