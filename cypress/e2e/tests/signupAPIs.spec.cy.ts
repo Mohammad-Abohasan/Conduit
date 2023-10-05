@@ -1,10 +1,11 @@
+import { generateRandomString } from "../../support/helpers/generateHelper";
 import addUser from "../../support/helpers/signupHelper";
 
 describe("Conduit: Signup", () => {
   it("Cxxx1: Conduit - Create new Account", () => {
     addUser.addNewUserUsingAPI(
-      `mohammad${Math.round(Math.random() * 1000)}`,
-      `mohammad${Math.round(Math.random() * 1000)}@gmail.com`,
+      `mohammad${generateRandomString()}`,
+      `mohammad${generateRandomString()}@gmail.com`,
       "mohammad123"
     );
   });
@@ -12,8 +13,8 @@ describe("Conduit: Signup", () => {
   it("Cxxx2: Conduit - Create new Account", () => {
     const payload = {
       user: {
-        username: `mohammad${Math.round(Math.random() * 1000)}`,
-        email: `mohammad${Math.round(Math.random() * 1000)}@gmail.com`,
+        username: `mohammad${generateRandomString()}`,
+        email: `mohammad${generateRandomString()}@gmail.com`,
         password: "mohammad123",
       },
     };
