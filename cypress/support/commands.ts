@@ -36,29 +36,29 @@
 //   }
 // }
 
-declare namespace Cypress {
-  interface Chainable<Subject> {
-    apiCall: typeof apiCall;
-  }
-}
+// declare namespace Cypress {
+//   interface Chainable<Subject> {
+//     apiCall: typeof apiCall;
+//   }
+// }
 
-function apiCall(method: string, url: string, payload?: any) {
-  const restAPI: any = {
-    GET: { response: 200 },
-    POST: { response: 201 },
-    PUT: { response: 200 },
-    DELETE: { response: 200 },
-  };
-  return cy
-    .api({
-      method,
-      url,
-      body: payload,
-    })
-    .then((response) => {
-      expect(response.status).to.eq(restAPI[method].response);
-      return response;
-    });
-}
+// function apiCall(method: string, url: string, payload?: any) {
+//   const restAPI: any = {
+//     GET: { response: 200 },
+//     POST: { response: 201 },
+//     PUT: { response: 200 },
+//     DELETE: { response: 200 },
+//   };
+//   return cy
+//     .api({
+//       method,
+//       url,
+//       body: payload,
+//     })
+//     .then((response) => {
+//       expect(response.status).to.eq(restAPI[method].response);
+//       return response;
+//     });
+// }
 
-Cypress.Commands.add("apiCall", apiCall);
+// Cypress.Commands.add("apiCall", apiCall);
