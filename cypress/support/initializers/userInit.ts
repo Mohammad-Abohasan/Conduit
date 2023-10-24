@@ -1,12 +1,12 @@
 import { ICreateUserPayload } from "../API/payload/signupPayload";
-import { generateRandomString } from "../helpers/generateHelper";
+import GenericHelper from "../helpers/genericHelper";
 
 export default class addUser {
   static initUser(): ICreateUserPayload {
     const payload: ICreateUserPayload = {
       user: {
-        username: `mohammad${generateRandomString()}`,
-        email: `mohammad${generateRandomString()}@gmail.com`,
+        username: `mohammad${GenericHelper.generateRandomString()}`,
+        email: `mohammad${GenericHelper.generateRandomString()}@gmail.com`,
         password: "mohammad123",
       },
     };
